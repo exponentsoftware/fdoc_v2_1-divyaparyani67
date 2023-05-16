@@ -4,24 +4,26 @@
 // function countOccurrences(arr, num) {
 //   let occurenceCount = 0;
 
-//   for (let i = 0; i <= arr.length; i++) {
+//   for (let i = 0; i < arr.length; i++) {
 //     if (arr[i] == num) occurenceCount++;
 //   }
 //   return occurenceCount;
 // }
 
 // const arr = [4, 2, 6, 8, 4, 1, 4];
+
 // console.log(countOccurrences(arr, 4));
 
 //Write a function called `filterByLength` that takes an array of strings and a number as input and returns an array of all the strings in the input array whose length is greater than or equal to the input number.
 
 // function filterByLength(arr, target) {
-//   return arr.filter((arr) => arr.length >= target);
+//   return arr.filter((arr) => arr.includes("pp") == true);
 // }
 
 // const arr = ["apple", "banana", "cherry", "date", "elderberry"];
-// console.log(filterByLength(arr, 6));
-// //["banana", "cherry", "elderberry"]
+// console.log(filterByLength(arr, 4));
+
+//["banana", "cherry", "elderberry"]
 
 //Write a function called `sumOfPrimes` that takes a number as input and returns the sum of all prime numbers less than or equal to the input number.
 
@@ -46,24 +48,6 @@
 
 // console.log(sumOfPrimes(10));
 
-//Write a function called `findMaximumSubarray` that takes an array of integers as input and returns the maximum sum of any contiguous subarray within the input array.
 
-var findMaximumSubarray = function (arr) {
-  var len = arr.length;
-  var max = Number.MIN_SAFE_INTEGER;
-  var before = 0;
-  var now = 0;
 
-  if (!len) return 0;
 
-  for (var i = 0; i < len; i++) {
-    now = Math.max(before + arr[i], arr[i]);
-    max = Math.max(now, max);
-    before = now;
-  }
-
-  return max;
-};
-
-const arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
-console.log(findMaximumSubarray(arr));
